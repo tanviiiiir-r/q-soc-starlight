@@ -1,1 +1,105 @@
+# === PYTHON ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.egg-info/
+*.log
+*.tmp
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb~
+*.nbconvert.ipynb
+
+# Notebooks with outputs
+*.out.ipynb
+*.run.ipynb
+
+# Virtual environments
 .venv/
+env/
+ENV/
+venv/
+*.env
+.env*
+
+# Pip
+pip-wheel-metadata/
+*.whl
+
+# Build outputs
+build/
+dist/
+*.egg
+*.eggs/
+*.manifest
+*.spec
+
+# === DATA ===
+*.csv
+*.jsonl
+*.json
+*.xml
+*.parquet
+*.npy
+*.npz
+*.xlsx
+
+# === ARTIFACTS ===
+*.onnx
+*.pt
+*.ckpt
+*.tflite
+*.h5
+
+# === OUTPUT FILES / MEDIA ===
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.pdf
+*.mp4
+*.webm
+*.avi
+
+# === VS CODE ===
+.vscode/
+*.code-workspace
+
+# === SYSTEM FILES ===
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+
+# === AZURE ===
+*.azure*
+*.publishsettings
+*.pem
+*.cer
+*.crt
+*.key
+
+# === GIT ===
+*.orig
+*.rej
+*.patch
+
+# === MODEL DIRS ===
+llama2_mitre/
+outputs/
+checkpoints/
+runs/
+logs/
+
+# === TEMP ===
+*~
+*.bak
+*.swp
+*.swo
+*.log
+*.tmp
+.cache/
