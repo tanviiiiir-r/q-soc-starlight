@@ -1,0 +1,55 @@
+{
+  "definition": {
+    "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+    "actions": {
+      "Parse_JSON": {
+        "inputs": {
+          "content": "@triggerBody()",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "threat_id": { "type": "string" },
+              "vector": { "type": "array", "items": { "type": "number" } },
+              "detected_at": { "type": "string", "format": "date-time" }
+            }
+          }
+        },
+        "runAfter": {},
+        "type": "ParseJson"
+      },
+      "Post_Incident_To_Webhook": {
+        "inputs": {
+          "method": "POST",
+          "uri": "https://webhook.site/your-url",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "body": {
+            "alert": "@body('Parse_JSON')"
+          }
+        },
+        "runAfter": {
+          "Parse_JSON": [ "Succeeded" ]
+        },
+        "type": "Http"
+      }
+    },
+    "triggers": {
+      "manual": {
+        "type": "Request",
+        "kind": "Http",
+        "inputs": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "threat_id": { "type": "string" },
+              "vector": { "type": "array", "items": { "type": "number" } },
+              "detected_at": { "type": "string", "format": "date-time" }
+            }
+          }
+        }
+      }
+    }
+  },
+  "kind": "Stateful"
+}
