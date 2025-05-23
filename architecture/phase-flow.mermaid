@@ -1,0 +1,36 @@
+graph TD
+    A[Wazuh Logs] --> B[Labeled Dataset]
+    B --> C[Quantum Feature Encoding (64-dim)]
+    C --> D[Quantum Kernel PCA (Simulator)]
+    D --> E[3D Starlight Vectors]
+
+    E --> F[Hardware Evaluation (IonQ/Quantinuum QPU)]
+    F --> G[Quantum Anomaly Cluster Detected]
+
+    G --> H[LLM Narrator (LLaMA-2 ONNX)]
+    H --> I[Readable Incident Summary]
+
+    I --> J[SOAR Playbook Triggered (Logic App)]
+    J --> K[Signed with Dilithium Key]
+    K --> L[Webhook / Teams / API Integration]
+
+    subgraph Azure Environment
+        A
+        B
+        C
+        D
+        E
+        F
+        G
+        J
+        K
+    end
+
+    subgraph AI Processing
+        H
+        I
+    end
+
+    subgraph Response Layer
+        L
+    end
