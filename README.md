@@ -1,8 +1,8 @@
 [![CI](https://github.com/tanviiiiir-r/q-soc-starlight/actions/workflows/ci.yml/badge.svg)]
-
+[![CI](https://github.com/tanviiiiir-r/q-soc-starlight/actions/workflows/ci.yml/badge.svg)](https://github.com/tanviiiiir-r/q-soc-starlight/actions) [![License](https://img.shields.io/github/license/tanviiiiir-r/q-soc-starlight?style=flat)](https://github.com/tanviiiiir-r/q-soc-starlight/blob/main/LICENSE)
 # q-soc-starlight
 
-Brief overview of q-soc-starlight
+Quantum‑enhanced threat‑hunting co‑pilot for SIEM and SOC workflows
 
 ## ✨ Features
 - Bullet point 1
@@ -37,3 +37,6 @@ MIT © 2026 Tanvir Rana
 
 ## 🤝 Contributing
 Feel free to open issues or submit pull requests – see `CONTRIBUTING.md` for guidelines.
+
+## 📦 License
+MIT © 2026 Tanvir Rana
