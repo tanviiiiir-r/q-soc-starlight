@@ -1,3 +1,5 @@
+[![CI](https://github.com/tanviiiiir-r/q-soc-starlight/actions/workflows/ci.yml/badge.svg)]
+
 # q-soc-starlight
 
 Brief overview of q-soc-starlight
